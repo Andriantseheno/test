@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .login {
   display: flex;
   flex-direction: column;
@@ -32,9 +32,13 @@ export default {
   left:35%;
   width: 400px;
   height: 350px;
-
   box-shadow: rgba(35, 35, 43, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+ @media screen and (min-width:300px) and (max-width:900px) {
+   width:70%;
+   left:15%;
+  }
 }
 h3{
     color:#a62a22;

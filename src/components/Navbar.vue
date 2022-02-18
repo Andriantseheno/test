@@ -9,7 +9,6 @@
           <fa icon="shopping-cart" />
         </button>
         <span class="kantity">{{ cartQty }}</span>
-        <div class="slogan">Manakaiky anao hatrany</div>
       </div>
       <ul class="nav">
         <router-link to="/hiditra">Fidirana</router-link>
@@ -27,14 +26,14 @@ export default {
   name: 'Navbar',
   data: function () {
     return {
-      displayCart: false
+      displayCart: false,
     }
   },
   props: ['cart', 'cartQty', 'cartTotal'],
-  methods:{
+  methods: {
     toggleCartMenu() {
       this.displayCart = !this.displayCart
-    }
+    },
   },
   components: {
     Cart,
@@ -44,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .Logo {
-  width: 90vw;
+  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -56,11 +55,16 @@ export default {
 .shop {
   position: absolute;
   top: 25%;
-  right: 50%;
+  right: 5%;
   color: tomato;
   font-size: 26px;
   border: none;
-  background-color: transparent;
+  background-color: white;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    font-size: 15px;
+    top: 35%;
+    right: 4.6%;
+  }
 
   :hover {
     transform: scale(1.1);
@@ -69,12 +73,17 @@ export default {
 .kantity {
   position: absolute;
   top: 24%;
-  right: 49.6%;
+  right: 4.6%;
   color: #273238;
   border: none;
   border-radius: 50%;
   text-align: center;
   font-size: 12px;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    font-size: 10px;
+    top: 33%;
+    right: 4%;
+  }
 }
 
 .titlea {
@@ -82,17 +91,14 @@ export default {
   font-size: 30px;
   font-family: 'Channel';
   margin-left: 20px;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    font-size: 15px;
+  }
 }
 a {
   text-decoration: none;
   color: white;
   font-family: fantasy;
-}
-.slogan {
-  font-size: 25px;
-  font-family: fantasy;
-  margin-right: 20px;
-  color: tomato;
 }
 .container {
   display: flex;
@@ -114,5 +120,8 @@ a {
   position: fixed;
   top: 100px;
   z-index: 100;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    font-size: 15px;
+  }
 }
 </style>

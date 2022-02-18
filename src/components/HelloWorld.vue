@@ -7,7 +7,7 @@
         </router-link>
         <div class="center">
           <router-link to="/hiditra">Hiditra</router-link>
-          <router-link to="/hisoratra">Hisoratra anarana</router-link>
+          <router-link to="/hisoratra">Hisoratra</router-link>
         </div>
         <div class="right">Manakaiky anao hatrany</div>
       </div>
@@ -36,6 +36,10 @@ export default {
     font-size: 30px;
     margin: 0px 30px;
     color: #a62a22;
+    @media screen and (min-width: 200px) and (max-width: 900px) {
+      font-size: 15px;
+      flex: 1;
+    }
   }
   .center {
     flex: 1.5;
@@ -45,6 +49,12 @@ export default {
     font-size: 25px;
     font-weight: bold;
     font-family: 'Champagne et Limousines';
+    @media screen and (min-width: 300px) and (max-width: 900px) {
+      font-size: 12px;
+      display:flex;
+      align-items: center;
+      justify-content: space-around;
+    }
     a {
       color: #273238;
     }
@@ -55,6 +65,9 @@ export default {
     font-size: 25px;
     font-family: fantasy;
     color: tomato;
+    @media screen and (min-width: 200px) and (max-width: 900px) {
+      display: none;
+    }
   }
 }
 .container a {

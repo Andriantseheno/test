@@ -1,18 +1,18 @@
 <template>
   <div class="wrapper">
     <Navbar
-      v-if="!['hiditra', 'hisoratra'].includes($route.name)"
+      v-if="!['hiditra', 'hisoratra', 'home'].includes($route.name)"
       :cart-qty="cartQty"
       :cart="cart"
       :cart-total="cartTotal"
       @delete-item="deleteItem"
       @addItem="addItem"
       @clearItem="clearItem"
-     
     />
-    <HelloWorld v-if="!['entana', 'details', 'harona','NotFound'].includes($route.name)" />
+    <HelloWorld
+      v-if="!['entana', 'details', 'harona', 'NotFound'].includes($route.name)"
+    />
 
-    
     <div class="containerapp">
       <router-view
         :products="products"
@@ -20,29 +20,31 @@
         @addItem="addItem"
         @clearItem="clearItem"
         @delete-item="deleteItem"
-       
       />
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import HelloWorld from './components/HelloWorld.vue'
+import Footer from './views/Footer.vue'
 
 export default {
-   name: 'App',
+  name: 'App',
   data() {
     return {
       products: null,
       cart: [],
-     }
+    }
   },
   created() {
-    fetch('https://hplussport.com/api/products/order/price')
-      .then(response => response.json())
-      .then(data =>{this.products = data})
-           
+    fetch('http://localhost:3000/items')
+      .then((response) => response.json())
+      .then((data) => {
+        this.products = data
+      })
   },
   methods: {
     addItem(product) {
@@ -71,7 +73,7 @@ export default {
     },
     clearItem() {
       this.cart = []
-    } 
+    },
   },
   computed: {
     cartTotal() {
@@ -93,11 +95,12 @@ export default {
   components: {
     Navbar,
     HelloWorld,
+    Footer,
   },
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -111,6 +114,6 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 90vw;
-  height:400px;
-  }
+  height: calc(100vh-40px);
+}
 </style>

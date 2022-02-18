@@ -1,13 +1,10 @@
 <template>
   <div class="prod">
-    
-      <router-link :to="{ name: 'details', params: { id: item.id } }">
-        <div class="le">
-        <img :src="item.image" :alt="item.name" />
-        <h5>{{ item.name }}</h5>
-        </div>
-      </router-link>
-    
+    <div class="le">
+      <img :src="item.image" :alt="item.name" />
+      <h5>{{ item.name }}</h5>
+    </div>
+          
     <span class="text">{{ Math.round(item.price * 200) }}Ariary</span>
     <button @click="this.$parent.$emit('addItem', item)" class="btn">
       Hividy
@@ -31,8 +28,7 @@ export default {
   margin: 20px 10px;
   width: 100%;
   height: 250px;
-  border: 1px solid lightgray;
-
+  
   a{
     text-decoration:none;
     color:#273238;

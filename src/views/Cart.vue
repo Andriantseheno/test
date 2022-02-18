@@ -57,10 +57,17 @@ export default {
   background-color: #f0f0f0;
   border: 3px solid #ababab;
   border-radius: 10px;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    width: 70%;
+    margin: 10px auto;
+  }
   .left {
     text-align: center;
     flex: 1.5;
     font-family: 'Champagne et Limousines';
+    @media screen and (min-width: 300px) and (max-width: 900px) {
+      font-size: 10px;
+    }
   }
   .center {
     align-items: center;
@@ -68,6 +75,9 @@ export default {
     flex: 3;
     font-family: 'Champagne et Limousines';
     font-weight: bold;
+    @media screen and (min-width: 300px) and (max-width: 900px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -76,6 +86,11 @@ export default {
   width: 50%;
   margin: 50px auto;
   border-radius: 10px;
+  z-index: 102;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    width: 70%;
+    margin: 50px auto;
+  }
 
   h3 {
     text-align: center;
@@ -89,9 +104,16 @@ export default {
     align-items: center;
     margin: 5px auto;
     width: 400px;
+    @media screen and (min-width: 300px) and (max-width: 900px) {
+      width: 70%;
+      margin: 10px auto;
+    }
     .left {
       flex: 1.5;
       font-weight: bold;
+      @media screen and (min-width: 300px) and (max-width: 900px) {
+        font-size: 10px;
+      }
     }
     .center {
       flex: 3;
@@ -107,6 +129,9 @@ export default {
     margin: 0 10px;
     font-weight: bold;
     font-family: 'Champagne et Limousines';
+    @media screen and (min-width: 300px) and (max-width: 900px) {
+      margin: 0 5px;
+    }
   }
 }
 
@@ -124,6 +149,9 @@ export default {
   border-radius: 2px;
   color: white;
   background-color: #273238;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    padding: 2px 2px;
+  }
 }
 .analana {
   font-family: 'Champagne et Limousines';
@@ -132,6 +160,9 @@ export default {
   border-radius: 2px;
   color: white;
   background-color: #273238;
+  @media screen and (min-width: 300px) and (max-width: 900px) {
+    padding: 2px 2px;
+  }
 }
 .dropdown-clip {
   position: fixed;

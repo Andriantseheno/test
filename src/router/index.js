@@ -6,7 +6,7 @@ import NotFound from '../views/NotFound.vue'
 import NetworkError from '../views/NetworkError.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
-import ProductDetails from '../components/ProductDetails.vue'
+
 
 
 const routes = [
@@ -15,13 +15,7 @@ const routes = [
     name: 'home',
     component: Home,
   },
-  {
-    path: '/details/:id',
-    name: 'details',
-    props: true,
-    component: ProductDetails,
-  },
-  {
+   {
     path: '/entana',
     name: 'entana',
     component: ProductList,

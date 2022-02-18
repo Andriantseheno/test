@@ -25,12 +25,18 @@ export default {
   align-items: center;
   width:100vw;
   height: 300px;
-  margin: 1px auto;
+  margin: 150px auto;
   h1{
     font-size: 70px;
+     @media screen and (min-width:300px) and (max-width:900px) {
+    text-align:center;
+  }
     }
       h3{
     font-size: 30px;
+     @media screen and (min-width:300px) and (max-width:900px) {
+    text-align:center;
+  }
     }
 }
 </style>
