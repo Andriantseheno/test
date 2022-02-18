@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <Navbar
-      v-if="!['hiditra', 'hisoratra', 'home'].includes($route.name)"
+      v-if="!['hiditra', 'hisoratra'].includes($route.name)"
       :cart-qty="cartQty"
       :cart="cart"
       :cart-total="cartTotal"
