@@ -114,6 +114,5 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 90vw;
-  height: calc(100vh-40px);
-}
+  }
 </style>
