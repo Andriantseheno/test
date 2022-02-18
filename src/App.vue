@@ -40,7 +40,7 @@ export default {
     }
   },
   created() {
-    fetch('http://localhost:3000/items')
+    fetch('https://hplussport.com/api/products/order/price')
       .then((response) => response.json())
       .then((data) => {
         this.products = data

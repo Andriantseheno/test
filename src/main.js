@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import GStore from './store'
+
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -12,6 +12,5 @@ library.add(faShoppingCart)
 
 createApp(App)
      .use(router)
-     .provide('GStore', GStore)
-    .component('fa', FontAwesomeIcon)
+     .component('fa', FontAwesomeIcon)
     .mount('#app')
